@@ -41,3 +41,9 @@ alias aria="aria2c -x 8 -s 8"
 
 # fzf
 alias fzf1="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/curl/lib"
+export CPPFLAGS="-I/usr/local/opt/curl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"

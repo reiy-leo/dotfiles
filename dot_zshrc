@@ -30,16 +30,6 @@ export EDITOR='vim'
 # PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-# 系统自带的python
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
-# curl
-export PATH="/usr/local/opt/curl/bin:$PATH"
-# MacVim
-export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
-# bun
-export PATH="$HOME/.bun/bin:$PATH"
-# sublime text
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"

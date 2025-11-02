@@ -14,3 +14,9 @@ alias wechat='nohup /Applications/WeChat.app/Contents/MacOS/WeChat &>/dev/null &
 alias microsoft-updater='echo "更新Microsoft Office" && open -a "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"'
 
 alias refresh-dns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo "DNS 缓存已刷新"'
+
+# MacVim
+export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
+
+# sublime text
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
