@@ -1,1 +1,1 @@
-export PATH="~/.bun/bin:$PATH"
+# export PATH="~/.bun/bin:$PATH"

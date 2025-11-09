@@ -20,11 +20,12 @@ def get_application_list():
     '''获取符合要求的应用列表
     '''
     apps = glob.glob('/Applications/*.app')
-    apps.extend(glob.glob('/Applications/*/*.app'))
+    apps.extend(glob.glob('/Applications/**/*.app'))
     apps.extend(glob.glob('/System/Applications/*.app'))
-    apps.extend(glob.glob('/System/Applications/*/*.app'))
+    apps.extend(glob.glob('/System/Applications/**/*.app'))
     # user applications
     apps.extend(glob.glob('/Users/*/Applications/*.app'))
+    apps.extend(glob.glob('/Users/*/Applications/**/*.app'))
     return apps
 
 def get_application_name(path: str, ensure_original: bool=False):

@@ -1,5 +1,3 @@
-alias zshrc="$EDITOR ~/.zshrc"
-
 alias iina='open -a IINA'
 
 alias preview='open -a preview'
