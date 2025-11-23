@@ -6,7 +6,9 @@ alias ll="eza -lh --group-directories-first -s modified --color-scale modified -
 alias la='ll -a'
 
 ## dust: better du
-alias du=dust
+alias du=dust -br -d1 -T 8
+# -b 不显示bar(左对齐) -B bar右对齐
+# -r 再次上下颠倒，默认已经上下颠倒
 
 ## fd: better find
 alias find=fd
