@@ -1,5 +1,6 @@
 实地替换：sed -i 's/old/new/g' file.txt
-实地替换，备份到.bak文件：sed -i.bak 's/foo/bar/g' file.txt
+实地替换，备份到.bak文件：sed -i.bak 's/x/y/g' file.txt
+macOS/BSD必须提供-i '' /-I ''形式
 %
 全局替换：sed -e 's/old/new/g' file.txt
 只替换第5行中的：sed '5s/old/new/' file.txt
@@ -17,3 +18,5 @@
 %
 同时执行多个任务
 sed -e 's/foo/bar/g' -e '/baz/d' file.txt
+sed -e 's/foo/bar/g; /baz/d' file.txt
+sed -i '' -e 's/foo/bar/g' -e '/baz/d' file.txt

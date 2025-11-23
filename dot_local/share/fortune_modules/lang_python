@@ -24,7 +24,7 @@ python 用pydantic简化数据验证和设置
 %
 用uv来管理python项目，uv add安装依赖
 %
-python 用ruff格式化代码
+python 用ruff格式化代码，使用uvx ruff
 %
 用loguru代替logging用于日志记录
 %

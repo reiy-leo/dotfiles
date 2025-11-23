@@ -1,0 +1,11 @@
+配合Apache使用
+LoadModule php_module /usr/local/opt/php/lib/httpd/modules/libphp.so
+<FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+</FilesMatch>
+DirectoryIndex index.php index.html
+%
+PHP默认配置php.ini、php-fpm.ini在/usr/local/etc/php/8.5/
+%
+后台服务：brew services start php
+一次性：/usr/local/opt/php/sbin/php-fpm --nodaemonize
