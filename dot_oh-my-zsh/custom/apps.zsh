@@ -18,3 +18,6 @@ export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
 
 # sublime text
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+
+# catpaw
+export PATH="/Applications/CatPawAI.app/Contents/Resources/app/bin:$PATH"
