@@ -8,8 +8,4 @@ export HOMEBREW_BUNDLE_FILE=~/Brewfile
 # homebrew源
 #export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
-# zsh plugins
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 alias bb='brew bundle'
