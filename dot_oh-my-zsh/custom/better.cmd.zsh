@@ -14,8 +14,9 @@ alias du="dust -br -d1 -T 8"
 alias find=fd
 
 ## rmtrash
-alias del="rmtrash"
-alias trash="rmtrash"
+alias del="rmtrash -r"
+alias trash="rmtrash -r"
+alias drop="rmtrash -r"
 
 # -E 使用现代正则表达式
 alias fd-e='find -E'
