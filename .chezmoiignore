@@ -1,3 +1,4 @@
 .oh-my-zsh/custom/notion.zsh
+.oh-my-zsh/custom/conda.zsh
 .local/share/fortune_modules/
 gitignores/
