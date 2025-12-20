@@ -20,4 +20,4 @@ export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # catpaw
-export PATH="/Applications/CatPawAI.app/Contents/Resources/app/bin:$PATH"
+alias catpaw='/Applications/CatPawAI.app/Contents/Resources/app/bin/code'
