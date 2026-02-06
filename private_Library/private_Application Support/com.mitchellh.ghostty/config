@@ -20,8 +20,10 @@ adjust-underline-thickness = 30%
 adjust-cursor-height = -50%
 
 # 字体
+font-family = "Monaspace Neon"
+#font-family = "JetBrains Maple Mono"
 # font-family = "Google Sans Code"
-font-family = "Cascadia Mono"
+# font-family = "Cascadia Mono"
 # font-family = "0xProto"
 # font-family = "Noto Sans Mono"
 # font-family = "Reddit Mono"
