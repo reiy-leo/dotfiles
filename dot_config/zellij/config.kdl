@@ -1,34 +1,57 @@
 keybinds clear-defaults=true {
     locked {
+        // 表示忽略Zellij本身的按键绑定，直接把按键给终端
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
     pane {
+        // 前置按键
+        bind "Ctrl p" { SwitchToMode "normal"; }
+
+        // 切换焦点
         bind "left" { MoveFocus "left"; }
-        bind "down" { MoveFocus "down"; }
-        bind "up" { MoveFocus "up"; }
         bind "right" { MoveFocus "right"; }
+        bind "up" { MoveFocus "up"; }
+        bind "down" { MoveFocus "down"; }
+        bind "h" { MoveFocus "left"; }
+        bind "l" { MoveFocus "right"; }
+        bind "k" { MoveFocus "up"; }
+        bind "j" { MoveFocus "down"; }
+
+        bind "p" { SwitchFocus; }
+
+        // 重新命名当前pane
         bind "c" { SwitchToMode "renamepane"; PaneNameInput 0; }
         bind "d" { NewPane "down"; SwitchToMode "normal"; }
-        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
-        bind "f" { ToggleFocusFullscreen; SwitchToMode "normal"; }
-        bind "h" { MoveFocus "left"; }
-        bind "i" { TogglePanePinned; SwitchToMode "normal"; }
-        bind "j" { MoveFocus "down"; }
-        bind "k" { MoveFocus "up"; }
-        bind "l" { MoveFocus "right"; }
-        bind "n" { NewPane; SwitchToMode "normal"; }
-        bind "p" { SwitchFocus; }
-        bind "Ctrl p" { SwitchToMode "normal"; }
         bind "r" { NewPane "right"; SwitchToMode "normal"; }
+        bind "n" { NewPane; SwitchToMode "normal"; }
         bind "s" { NewPane "stacked"; SwitchToMode "normal"; }
+
+        // 切换嵌入/浮动
+        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
+        // 切换浮动
         bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
+        // 切换全屏模式
+        bind "f" { ToggleFocusFullscreen; SwitchToMode "normal"; }
+        // 切换固定
+        bind "i" { TogglePanePinned; SwitchToMode "normal"; }
+        // 切换边框
         bind "z" { TogglePaneFrames; SwitchToMode "normal"; }
     }
     tab {
+        // 前置按键
+        bind "Ctrl t" { SwitchToMode "normal"; }
+
+        // 切换标签页
         bind "left" { GoToPreviousTab; }
         bind "down" { GoToNextTab; }
         bind "up" { GoToPreviousTab; }
         bind "right" { GoToNextTab; }
+        bind "h" { GoToPreviousTab; }
+        bind "j" { GoToNextTab; }
+        bind "k" { GoToPreviousTab; }
+        bind "l" { GoToNextTab; }
+
+        // 直接跳转到指定标签页
         bind "1" { GoToTab 1; SwitchToMode "normal"; }
         bind "2" { GoToTab 2; SwitchToMode "normal"; }
         bind "3" { GoToTab 3; SwitchToMode "normal"; }
@@ -38,57 +61,72 @@ keybinds clear-defaults=true {
         bind "7" { GoToTab 7; SwitchToMode "normal"; }
         bind "8" { GoToTab 8; SwitchToMode "normal"; }
         bind "9" { GoToTab 9; SwitchToMode "normal"; }
+
+        // 分割窗格
         bind "[" { BreakPaneLeft; SwitchToMode "normal"; }
         bind "]" { BreakPaneRight; SwitchToMode "normal"; }
         bind "b" { BreakPane; SwitchToMode "normal"; }
-        bind "h" { GoToPreviousTab; }
-        bind "j" { GoToNextTab; }
-        bind "k" { GoToPreviousTab; }
-        bind "l" { GoToNextTab; }
+
+        // 新建
         bind "n" { NewTab; SwitchToMode "normal"; }
+        // 重命名
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
+        // 全Pane同步：整个Tab的索引Pane都同步键入
         bind "s" { ToggleActiveSyncTab; SwitchToMode "normal"; }
-        bind "Ctrl t" { SwitchToMode "normal"; }
+        // 关闭
         bind "x" { CloseTab; SwitchToMode "normal"; }
+        // 显示/隐藏
         bind "tab" { ToggleTab; }
     }
     resize {
+        // 前置按键
+        bind "Ctrl n" { SwitchToMode "normal"; }
+        // 增加
         bind "left" { Resize "Increase left"; }
         bind "down" { Resize "Increase down"; }
         bind "up" { Resize "Increase up"; }
         bind "right" { Resize "Increase right"; }
-        bind "+" { Resize "Increase"; }
-        bind "-" { Resize "Decrease"; }
-        bind "=" { Resize "Increase"; }
-        bind "H" { Resize "Decrease left"; }
-        bind "J" { Resize "Decrease down"; }
-        bind "K" { Resize "Decrease up"; }
-        bind "L" { Resize "Decrease right"; }
+        // 增加
         bind "h" { Resize "Increase left"; }
         bind "j" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
         bind "l" { Resize "Increase right"; }
-        bind "Ctrl n" { SwitchToMode "normal"; }
+
+        // 减少
+        bind "H" { Resize "Decrease left"; }
+        bind "J" { Resize "Decrease down"; }
+        bind "K" { Resize "Decrease up"; }
+        bind "L" { Resize "Decrease right"; }
+        // +=-
+        bind "+" { Resize "Increase"; }
+        bind "=" { Resize "Increase"; }
+        bind "-" { Resize "Decrease"; }
     }
     move {
+        // 前置按键
+        bind "Ctrl h" { SwitchToMode "normal"; }
+
         bind "left" { MovePane "left"; }
         bind "down" { MovePane "down"; }
         bind "up" { MovePane "up"; }
         bind "right" { MovePane "right"; }
+
         bind "h" { MovePane "left"; }
-        bind "Ctrl h" { SwitchToMode "normal"; }
         bind "j" { MovePane "down"; }
         bind "k" { MovePane "up"; }
         bind "l" { MovePane "right"; }
+
         bind "n" { MovePane; }
         bind "p" { MovePaneBackwards; }
         bind "tab" { MovePane; }
     }
     scroll {
+        // Ctrl+s 前置按键
         bind "e" { EditScrollback; SwitchToMode "normal"; }
         bind "s" { SwitchToMode "entersearch"; SearchInput 0; }
     }
     search {
+        // Ctrl+ 前置按键
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "n" { Search "down"; }
         bind "o" { SearchToggleOption "WholeWord"; }
@@ -96,6 +134,8 @@ keybinds clear-defaults=true {
         bind "w" { SearchToggleOption "Wrap"; }
     }
     session {
+        // 前置按键
+        bind "Ctrl o" { SwitchToMode "normal"; }
         bind "a" {
             LaunchOrFocusPlugin "zellij:about" {
                 floating true
@@ -110,7 +150,7 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
-        bind "Ctrl o" { SwitchToMode "normal"; }
+        // 管理插件
         bind "p" {
             LaunchOrFocusPlugin "plugin-manager" {
                 floating true
@@ -125,6 +165,7 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
+        // 管理session
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
                 floating true
@@ -133,6 +174,8 @@ keybinds clear-defaults=true {
             SwitchToMode "normal"
         }
     }
+
+    // 除了locked模式外
     shared_except "locked" {
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
@@ -144,17 +187,21 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
+
         bind "Ctrl g" { SwitchToMode "locked"; }
+
         bind "Alt h" { MoveFocusOrTab "left"; }
+        bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt i" { MoveTab "left"; }
+        bind "Alt o" { MoveTab "right"; }
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
-        bind "Alt l" { MoveFocusOrTab "right"; }
+
         bind "Alt n" { NewPane; }
-        bind "Alt o" { MoveTab "right"; }
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
-        bind "Ctrl q" { Quit; }
+
+        bind "Ctrl q" { Quit; } // 退出Zellij
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
@@ -286,7 +333,8 @@ default_shell "zsh"
 default_cwd "~"
 
 // 启动时使用的布局，默认是"default"
-default_layout "compact"
+// 使用~/.config/zellij/layouts/目录下的布局文件
+default_layout "circular-river"
 
 // 从哪里加载布局
 // layout_dir "/tmp"
