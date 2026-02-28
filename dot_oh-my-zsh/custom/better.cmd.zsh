@@ -25,8 +25,8 @@ alias fd-e='find -E'
 alias lg=lazygit
 
 # grep
-alias 'grep.p1'='pcregrep'
-alias 'grep.p2'='pcre2grep'
+alias 'grep1'='pcregrep'
+alias 'grep2'='pcre2grep'
 
 # sudo
 alias please='sudo'
