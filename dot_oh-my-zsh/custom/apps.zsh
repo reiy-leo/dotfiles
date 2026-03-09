@@ -26,7 +26,7 @@ alias catpaw='/Applications/CatPawAI.app/Contents/Resources/app/bin/code'
 alias launched="launchctl list | grep.p2 -v -e '^-' -e 'com.apple.' | awk 'NR > 1 {print \$3}' | sort"
 
 # postgresql
-echo 'export PATH="/usr/local/opt/postgresql@18/bin:$PATH"' >> ~/.zshrc
+export PATH="/usr/local/opt/postgresql@18/bin:$PATH"
 # 默认创建了一个数据库：initdb --locale=en_US.UTF-8 -E UTF-8 /usr/local/var/postgresql@18
 export LDFLAGS="-L/usr/local/opt/postgresql@18/lib"
 export CPPFLAGS="-I/usr/local/opt/postgresql@18/include"
