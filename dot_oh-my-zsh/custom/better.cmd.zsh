@@ -18,6 +18,9 @@ alias del="rmtrash -r"
 alias trash="rmtrash -r"
 alias drop="rmtrash -r"
 
+# aria2c
+alias aria2c-16-64="aria2c -x 16 --split=64"
+
 # -E 使用现代正则表达式
 alias fd-e='find -E'
 
