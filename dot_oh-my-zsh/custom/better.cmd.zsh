@@ -56,3 +56,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 
 # zellij
 alias zj="zellij action dump-layout > ~/.config/zellij/layouts/circular-river.kdl"
+
+function where() {
+    ll `which $*`
+}
