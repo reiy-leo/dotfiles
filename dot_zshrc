@@ -14,7 +14,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # 自带插件位置 $ZSH/plugins/
 # 自定义插件位置 $ZSH_CUSTOM/plugins/
-plugins=(git vundle brew emoji rand-quote colored-man-pages)
+plugins=(git vundle brew emoji rand-quote colored-man-pages uv command-not-found colorize starship)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,5 +37,8 @@ eval "$(zoxide init zsh --cmd cd)"
 # gnupg
 export GPG_TTY=$(tty)
 
-# vim: ft=zsh
+# omz plugin colorize
+ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
+ZSH_COLORIZE_TOOL=chroma
 
+# vim: ft=zsh

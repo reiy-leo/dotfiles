@@ -1,0 +1,66 @@
+# ~/.config/starship.toml
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 10000
+
+[directory]
+style = "bold blue"
+format = "[$path]($style)[$read_only]($read_only_style)"
+
+[character]
+success_symbol = "👌 "
+error_symbol = "🚨 "
+format = "$symbol"
+
+[git_branch]
+format = " [$symbol$branch(:$remote_branch)]($style)"
+always_show_remote = true
+
+[package]
+format = " is [$symbol$version]($style)"
+disabled = true
+
+[aws]
+disabled = true
+
+[conda]
+format = ' [$symbol$environment](bold green) '
+
+[container]
+disabled = false
+
+[rlang]
+disabled = false
+
+[julia]
+disabled = false
+
+[ruby]
+disabled = false
+
+[os]
+disabled = false
+
+[rust]
+format = '➤ [$symbol($version )]($style)'
+disabled = false
+
+[dotnet]
+format = ' ➤ [$symbol($version) (🎯$tfm)]($style)'
+heuristic = false
+disabled = false
+
+[golang]
+disabled = false
+
+[lua]
+symbol = "🌕"
+format = " ➤ [$symbol($version )]($style)"
+disabled = false
+
+[line_break]
+disabled = false
+
+[time]
+disabled = false
