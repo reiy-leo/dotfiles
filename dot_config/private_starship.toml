@@ -1,4 +1,5 @@
 # ~/.config/starship.toml
+# https://starship.rs/config/#lua
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
