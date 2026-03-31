@@ -5,18 +5,28 @@
 add_newline = true
 command_timeout = 10000
 
+
 [directory]
-style = "bold blue"
-format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bg:bright-blue"
+format = "[ $path ]($style)"
+truncation_length = 10
+truncation_symbol = "…/"
+truncate_to_repo = false
 
 [character]
-success_symbol = "👌 "
-error_symbol = "🚨 "
+success_symbol = "■ "
+error_symbol = "● "
 format = "$symbol"
 
 [git_branch]
-format = " [$symbol$branch(:$remote_branch)]($style)"
+style = "bg:#F05032"
+format = "[ $symbol$branch(:$remote_branch)]($style)"
 always_show_remote = true
+
+
+[git_status]
+style = "bg:#F05032"
+format = '([ \[$all_status$ahead_behind\] ]($style))'
 
 [package]
 format = " is [$symbol$version]($style)"
@@ -26,7 +36,8 @@ disabled = true
 disabled = true
 
 [conda]
-format = ' [$symbol$environment](bold green) '
+style = "bg:#43B02A"
+format = '[ $environment ]($style)'
 
 [container]
 disabled = false
@@ -41,27 +52,52 @@ disabled = false
 disabled = false
 
 [os]
-disabled = false
+disabled = true
 
 [rust]
-format = '➤ [$symbol($version )]($style)'
+symbol = "Rust "
+style = "bg:#CE422B"
+format = '[ $symbol($version) ]($style)'
 disabled = false
 
 [dotnet]
-format = ' ➤ [$symbol($version) (🎯$tfm)]($style)'
+style = "bg:#512BD4"
+format = '[ $symbol($version) (🎯$tfm) ]($style)'
 heuristic = false
 disabled = false
 
 [golang]
+symbol = "Go "
+style = "bg:#00ADD8"
 disabled = false
 
 [lua]
-symbol = "🌕"
-format = " ➤ [$symbol($version )]($style)"
+symbol = "Lua "
+style = "bg:#001A70"
+format = "[ $symbol($version) ]($style)"
 disabled = false
 
 [line_break]
 disabled = false
 
 [time]
+format = "🕰️ [$time]($style) "
 disabled = false
+
+[cmd_duration]
+format = "⏱️ [$duration]($style) "
+disabled = false
+
+[shlvl]
+disabled = false
+format = '[$symbol]($style) / '
+repeat = true
+symbol = '❯'
+repeat_offset = 1
+
+[python]
+symbol = "PY "
+style = ""
+format = '[ ${symbol}](bg:#FFD43B)[ ${pyenv_prefix}(${version}) ](bg:#3776AB)[ (\($virtualenv\)) ](bg:#b7bdf8)'
+
+
